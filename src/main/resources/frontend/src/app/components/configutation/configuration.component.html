@@ -1,0 +1,19 @@
+<ng-container *ngFor="let scheduledConfig of configuration?.scheduledConfigs">
+  <div class="schedule-container">
+    <div class="schedule-container__header">{{scheduledConfig.scheduleTime[0]}}:{{scheduledConfig.scheduleTime[1]}}</div>
+    <ng-container *ngFor="let roomConfig of scheduledConfig?.roomConfigs">
+      <div class="room-container">
+        <b>{{roomConfig.name}}</b>
+        <ng-container *ngFor="let deviceConfig of roomConfig?.devices">
+          <div>{{deviceConfig.name}} - ({{deviceConfig.lightLevel}}, {{deviceConfig.colorTemperature}})</div>
+        </ng-container>
+        <ng-container *ngFor="let deviceSetConfig of roomConfig?.deviceSets">
+          <div>{{deviceSetConfig.name}} - ({{deviceSetConfig.lightLevel}}
+            , {{deviceSetConfig.colorTemperature}})
+          </div>
+        </ng-container>
+      </div>
+    </ng-container>
+  </div>
+
+</ng-container>

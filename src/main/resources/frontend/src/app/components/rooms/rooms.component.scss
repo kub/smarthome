@@ -1,0 +1,65 @@
+button {
+  background: none repeat scroll 0 0 transparent;
+  border: medium none;
+  border-spacing: 0;
+  list-style: none outside none;
+  margin: 0;
+  padding: 0;
+}
+
+
+.rooms-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.room-container {
+  height: 14vh;
+  background-color: lightgrey;
+  text-align: center;
+  border-radius: 15px;
+  margin: 5px 0;
+  border: solid 1px lightgrey;
+  padding: 10px;
+}
+
+.controls-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.control-container {
+  background-color: grey;
+  height: 7vh;
+  width: 7vh;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.control-container__title {
+  font-size: smaller;
+}
+
+.control-with-sub-controls-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-plus {
+  width: 4vh;
+  height: 4vh;
+}
+
+.img-minus {
+  width: 4vh;
+  height: 4vh;
+}
+
+.control-button:active {
+  color: lightgrey;
+  background-color: grey;
+}

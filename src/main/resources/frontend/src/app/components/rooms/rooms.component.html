@@ -1,0 +1,19 @@
+<div class="rooms-container">
+  <div class="room-container" *ngFor="let room of rooms">
+    <h3>{{room.name}}</h3>
+    <div class="controls-container">
+      <button class="control-with-sub-controls-button" *ngFor="let control of room.controls">
+        <button class="control-button" (click)="decreaseLightIntensity(control)">
+          <img class="img-minus" src="assets/minus.svg"/>
+        </button>
+        <div class="control-container" [style.background]="getBackgroundColor(control)" (click)="toggleControl(control)">
+          <span class="control-container__title">{{control.name}}</span>
+        </div>
+        <button class="control-button" (click)="increaseLightIntensity(control)">
+          <img class="img-plus"  src="assets/plus.svg"/>
+        </button>
+      </button>
+    </div>
+  </div>
+</div>
+
