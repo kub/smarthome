@@ -25,7 +25,7 @@ const routes: Routes = [
     }
   },
   {
-    path: 'rooms',
+    path: '',
     component: RoomsComponent,
     runGuardsAndResolvers: 'always',
     resolve: {
